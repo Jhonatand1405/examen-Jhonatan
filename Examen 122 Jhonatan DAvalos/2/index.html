@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Bootstrap</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Animación 2: Slide in de la tabla desde la izquierda */
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        .table-container {
+            animation: slideIn 0.8s ease-out;
+        }
+
+        /* Animación 3: Pulse de las filas de la tabla al pasar el mouse */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        tbody tr:hover {
+            animation: pulse 0.5s ease-in-out;
+            background-color: #f8f9fa;
+        }
+
+        /* Transición 3: Rotación de los botones al pasar el mouse */
+        .btn {
+            transition: transform 0.3s ease-in-out;
+        }
+        .btn:hover {
+            transform: rotate(5deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="table-container">
+                    <h5>Tabla</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Lenguaje</th>
+                                <th>Año</th>
+                                <th>Creador</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>1995</td>
+                                <td>Brendan Eich</td>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>1991</td>
+                                <td>Guido van Rossum</td>
+                            </tr>
+                            <tr>
+                                <td>Java</td>
+                                <td>1995</td>
+                                <td>James Gosling</td>
+                            </tr>
+                            <tr>
+                                <td>C++</td>
+                                <td>1979</td>
+                                <td>Bjarne Stroustrup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-between mt-3">
+                        <button class="btn btn-secondary">Close</button>
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
